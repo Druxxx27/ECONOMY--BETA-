@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br" data-theme="dark" statecash = "good">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Healthness</title>
     <link rel="stylesheet" href="index.css">
 
-    <svg style="display: none;">
+    <svg style="display: none;" >
         <symbol id="sol" viewBox="0 0 24 24">
 	        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	        <path d="M12 19a1 1 0 0 1 1 1v2a1 1 0 0 1 -2 0v-2a1 1 0 0 1 1 -1m-4.95 -2.05a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1 -1.414 -1.414l1.414 -1.414a1 1 0 0 1 1.414 0m11.314 0l1.414 1.414a1 1 0 0 1 -1.414 1.414l-1.414 -1.414a1 1 0 0 1 1.414 -1.414m-5.049 -9.836a5 5 0 1 1 -2.532 9.674a5 5 0 0 1 2.532 -9.674m-9.315 3.886a1 1 0 0 1 0 2h-2a1 1 0 0 1 0 -2zm18 0a1 1 0 0 1 0 2h-2a1 1 0 0 1 0 -2zm-16.364 -6.778l1.414 1.414a1 1 0 0 1 -1.414 1.414l-1.414 -1.414a1 1 0 0 1 1.414 -1.414m14.142 0a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 0 1 -1.414 -1.414l1.414 -1.414a1 1 0 0 1 1.414 0m-7.778 -3.222a1 1 0 0 1 1 1v2a1 1 0 0 1 -2 0v-2a1 1 0 0 1 1 -1" />
@@ -16,30 +16,68 @@
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
         </symbol>
+
+        <symbol id="home" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <path d="M10 12h4v4h-4l0 -4" />
+        </symbol>
+
+        <symbol id="profile" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
+            <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" />
+        </symbol>
+
+        <symbol id="cash" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 15h-3a1 1 0 0 1 -1 -1v-8a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v3" />
+            <path d="M12 19h-4a1 1 0 0 1 -1 -1v-8a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v2.5" />
+            <path d="M12 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+            <path d="M16 19h6" />
+            <path d="M19 16v6" />
+        </symbol>
     </svg>
 
 </head>
 <body>
-    <header>
-        <h1>Bank Healthness</h1>
-    </header>
 
     <main>
 
         <nav class="src">
 
-            <button id="home" class="lbar">Home</button>
-            <button id="dados" class="lbar">Dados</button>
-            <button id="profile" class="lbar">Perfil</button>
-            <div id="space">
-                <button id="theme"><svg id="btntheme" fill="currentColor"><use id="slchange"href="#sol" ></use></svg></button>
-            </div>
+            <button id="home" class="lbar">
+                <svg id="btntheme" fill="currentColor"><use id="slchange"href="#home" ></use></svg>
+            </button>
+
+            <button id="dados" class="lbar">
+                <svg id="btntheme" fill="none" stroke-width="2" stroke="currentColor"><use id="slchange"href="#cash" ></use></svg>
+            </button>
+
+            <h1 class="stnm">Bank Healthness</h1>
+
+            <button id="profile" class="lbar">
+                <svg id="btntheme" fill="currentColor"><use id="slchange"href="#profile" ></use></svg>
+            </button>
+
+            <button id="theme" class="lbar">
+                <svg id="btntheme" fill="currentColor"><use id="slchange"href="#sol" ></use></svg>
+            </button>
+
         </nav>
 
         <section class="mains">
+            <div class="card" id="fullcash">
+                <h2>SALDO DO MÊS</h2>
 
-            <p>f</p>
-
+                <h1 id="saldototal">R$0,00</h1>
+            </div>
+            <div class="sep">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
         </section>
 
 
