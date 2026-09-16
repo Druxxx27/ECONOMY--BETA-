@@ -1,25 +1,26 @@
 const themeBtn = document.getElementById('theme');
 const fullelement = document.documentElement;
-const themeIcon = themeBtn.querySelector('#btntheme');
-
+const themeIcon = themeBtn.querySelector('#slchange ');
 
 themeBtn.addEventListener("click", function(){
 
     const atualtema = fullelement.getAttribute("data-theme");
 
     let ptheme
-    let image 
+     
     if (atualtema == "dark"){
         ptheme = "light";
-        image = "imgs/moon.svg";
+        themeIcon.setAttribute('href', '#lua')
+        
     } else {
         ptheme = "dark";
-        image = "imgs/sun-high.svg";
+        themeIcon.setAttribute('href', '#sol')
+        
     }
 
 
     fullelement.setAttribute("data-theme", ptheme);
-    themeIcon.src = image 
+     
 
 });
 
